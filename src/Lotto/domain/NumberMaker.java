@@ -7,10 +7,10 @@ import java.util.stream.Collectors;
 
 public class NumberMaker {
 
-    private List randomNumberList = new ArrayList();
+    private List<Integer> randomNumberList = new ArrayList();
 
 
-    public List makeNumber() {
+    public List<Integer> makeNumber() {
         int num;
 
         for (int i = 0; i < 6; i++) {
@@ -22,14 +22,14 @@ public class NumberMaker {
     }
 
 
-    public List sorting(List numArr) {
+    public List<Integer> sorting(List<Integer> numArr) {
         Collections.sort(numArr);
         return numArr;
     }
 
 
-    public List removeDuplicate(List numList) {
+    public List<Integer> removeDuplicate(List<Integer> numList) {
         Object removeDupList = numList.stream().distinct().collect(Collectors.toList());
-        return (List) removeDupList;
+        return (List<Integer>) removeDupList;
     }
 }
